@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISM</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo"><a href="#">CODEtronics</a></div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">xyz</a></li>
+        <li><a href="#">xyz</a></li>
+        <li><a href="#">xyz</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner"></div>
+  <div class="about">
+    <div class="content">
+      <div class="title">content will be added</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo impedit atque consequatur! Iusto distinctio
+        temporibus repellendus labore odit adipisci harum ipsa beatae natus, eum eius, hic aperiam odio! Quasi molestias
+        magnam illo voluptatem iusto ipsam blanditiis, tempore cumque reiciendis quaerat vero tenetur, sequi dolores
+        libero voluptas vitae voluptate placeat dolorum modi ipsa nisi repellat facilis aliquam asperiores. Aut nam
+        repellat harum quas saepe dolorum voluptates ratione, itaque consectetur explicabo a facilis rem mollitia maxime
+        repudiandae fuga reprehenderit, odio cum incidunt labore molestiae quis non perferendis ipsam. Illum, in,
+        deserunt. Ipsa.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit hic excepturi nobis id, eos dolor libero, nam
+        assumenda, at culpa quos perspiciatis ratione ea modi! Natus sapiente a, explicabo sit quisquam eligendi esse
+        provident eos enim doloremque blanditiis aut placeat veniam, libero nostrum quae. Ipsam, iste reprehenderit
+        minima accusantium illo dolorem recusandae, ipsa autem quidem reiciendis a mollitia sit tenetur.</p>
+    </div>
+  </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menu = document.querySelector(".menu-list");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = () => {
+      menu.classList.add("active");
+      menuBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+      body.classList.add("disabledScroll");
+    }
+    cancelBtn.onclick = () => {
+      menu.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      body.classList.remove("disabledScroll");
+    }
+
+    window.onscroll = () => {
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+</body>
+
+</html>
