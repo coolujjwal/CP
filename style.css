@@ -208,7 +208,7 @@
     left: 0;
     height: 100vh;
     width: 100%;
-    background: #222;
+    background-image: linear-gradient(to left, #160b03 0%, #5a2d0c 100%);
     display: block;
     padding: 40px 0;
     text-align: center;
