@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::selection{
+  background: rgb(0,123,255,0.3);
+}
+.navbar{
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding: 25px 0;
+  transition: all 0.3s ease;
+}
+.navbar.sticky{
+  padding: 10px 0;
+  background-image: linear-gradient(to right, #160b03 0%, #5a2d0c 100%);
+  box-shadow: 0px 3px 5px 0px rgba(22, 11, 3, 0.3);
+}
+.navbar .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a{
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar .menu-list{
+  display: inline-flex;
+}
+.menu-list li{
+  list-style: none;
+}
+.menu-list li a{
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+  color: #007bff;
+}
+.banner{
+  height: 75vh;
+  background: url("banner3.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.content{
+  max-width: 1450px;
+  margin: auto;
+  padding: 0px 30px;
+}
+.icon{
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.icon.cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+.navbar.sticky .icon.cancel-btn{
+  top: 10px;
+}
+h1 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+}
+/*new*/
+.blog-with-left-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-gap: 4rem;
+  padding: 2rem;
+  margin: 1rem 10rem;
+  max-width: 100%;
+  background-color: rgb(207, 198, 198);
+  border-radius: .8rem;
+  box-shadow: rgba(0,0,0,1);
+}
+.left-side img{
+  max-width: 30rem;
+  border-radius: .8rem;
+}
+.right-content{
+  margin-left: 2rem;
+}
+.right-content h3{
+  padding-bottom: 1rem;
+}
+.btn{
+  padding-top: 1rem;
+}
+
+.btn0{
+  text-decoration: none;
+  text-transform: uppercase;
+  /* font-weight: 900; */
+  font-size: 1rem;
+  text-align: center;
+  padding: .15rem 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  display: inline-block;
+  color: #fff;
+  letter-spacing: 0;
+  background-image: linear-gradient(to right, #160b03 0%, #ca641c 100%);
+  border: double 0.1rem transparent;
+  box-shadow: 0 0.5rem 1rem #160b03;
+}
+.btn0:hover{
+  border: .1rem solid #160b03;
+  color: #222;
+  background-color: #fff;
+  box-shadow: none;
+  background-image: none;
+}
+@media (max-width: 1250px){
+  .blog-with-left-img{
+    flex-direction: column;
+  }
+  .left-side img{
+    max-width: 100%;
+  }
+}
+@media (max-width: 868px){
+  .blog-with-left-img{
+    flex-direction: column;
+    margin: 1.5rem;
+    padding: 1rem;
+  }
+  .left-side img{
+    max-width: 100%;
+  }
+}
+
+
+
+/*new end*/
+
+
+@media (max-width: 868px) {
+  body.disabledScroll{
+    overflow: hidden;
+  }
+  .icon{
+    display: block;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    z-index: 9;
+  }
+  .icon.cancel-btn{
+    display: none;
+  }
+  .icon.cancel-btn.show{
+    display: block;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar .menu-list{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: #222;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    clip-path: circle(25px at calc(100% - 55px) calc(0% + 50px));
+    transition: all 0.3s ease;
+  }
+  .navbar.sticky .menu-list{
+    clip-path: circle(25px at calc(100% - 55px) calc(0% + 35px));
+  }
+  .navbar .menu-list.active{
+    clip-path: circle(75%);
+  }
+  .navbar .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a{
+    font-size: 23px;
+  }
+}
