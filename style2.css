@@ -176,7 +176,7 @@ h1 {
 /*end new*/
 /*footer*/
 .end-of-page{
-  margin: 2.5rem 0rem;
+  margin: 2.5rem 0rem 0rem 0rem;
   justify-content: space-evenly;
   text-decoration: none;
   display: flex;
@@ -209,6 +209,12 @@ h1 {
 }
 .end-of-page .foot-part3 p{
   padding: 0.8rem 0;
+}
+.copy-right{
+  background-image: linear-gradient(to left, #160b03 0%, #5a2d0c 100%);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
 }
 @media screen and (max-width: 868px) {
   .end-of-page{
