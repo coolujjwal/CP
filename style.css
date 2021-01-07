@@ -92,9 +92,10 @@
 .card .img img{
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: 100%;
 }
 .card .top-text{
+  text-align: center;
   padding: 5px;
 }
 .card .top-text .name{
@@ -167,8 +168,8 @@
 }
 @media screen and (max-width: 868px) {
   .logo-content img{
-    width: 38vw;
-    height: 25vh;
+    width: 22vw;
+    height: 19vh;
   }
 }
 /*footer*/
