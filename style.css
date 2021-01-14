@@ -74,7 +74,7 @@
   margin: 3rem 5rem;
 }
 .card{
-  height: 280px;
+  height: 305px;
   max-width: 350px;
   margin: 0 20px;
   background: white;
@@ -100,12 +100,12 @@
   padding: 5px;
 }
 .card .top-text .name{
-  font-size: 25px;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #202020;
 }
 .card .top-text p{
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: 600;
   color: #e74c3c;
   line-height: 20px;
