@@ -60,7 +60,7 @@
 }
 .banner{
   height: 100vh;
-  background: url("banner3.jpg") no-repeat;
+  background: url("./images/banner3.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
