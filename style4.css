@@ -109,7 +109,7 @@
   justify-content: center;
 }
 .iconClass a{
-  padding: 0 0.5rem;
+  padding: 0 0.5rem 0.5rem 0;
 }
 .iconClass a img{
   height: 1.5rem;
@@ -126,11 +126,6 @@
 }
 .main-container h3{
   margin: 1rem 0;
-}
-.source-code {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 4px;
 }
 .member-wrapper {
   display: grid;
@@ -150,7 +145,7 @@
   display: block;
   width: 100%;
   height: 180px;
-  object-fit: cover;
+  object-fit: 100%;
 }
 .post-preview {
   background-color: #fff;
@@ -187,7 +182,7 @@
       width: 80%;
   }
   .member-wrapper{
-    grid-template-columns: repeat(auto-fit, 265px);
+    grid-template-columns: repeat(auto-fit, 200px);
   }
 }
 
