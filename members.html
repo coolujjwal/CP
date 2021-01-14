@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISM</title>
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik&display=swap">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo"><a href="#">CODEtronics</a></div>
+            <ul class="menu-list">
+                <div class="icon cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="members.html">Members</a></li>
+            </ul>
+            <div class="icon menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="banner"></div>
+    <div class="logo-content">
+        <h2 class="logo-text">CODEtronics</h2>
+        <img src="./logo/logo1.png" alt="">
+    </div>
+    
+    <section class="sec1">
+        <div class="main-container">
+            <h3 style="text-align: center">CODEtronics Members</h3>
+
+                <div class="member-wrapper" id="member-wrapper-id" >
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="end-of-page">
+        <div class="foot-part1 foot">
+            <h2>Contact us</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid fugiat labore voluptate provident
+                tempore rem
+                veritatis rerum nam molestias cupiditate, velit voluptatum, a voluptatem, cum ipsa ratione. Corporis,
+                est a.
+            </p>
+        </div>
+        <div class="foot-part2 foot">
+            <div class="logo-img">
+                <h2>CODEtronics</h2>
+                <img src="./logo/logo1.png" alt="">
+            </div>
+        </div>
+        <div class="foot-part3 foot">
+            <h2 class="doubt-form">Send your doubts</h2>
+            <p>Click on the given link to send your doubt</p>
+            <div><a href="#" class="btn0">Click here</a></div>
+        </div>
+    </footer>
+    <div class="copy-right">
+        <p class="copy-right-text">CODEtronics (c) Copyright 2018-2021</p>
+    </div>
+
+    <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menu = document.querySelector(".menu-list");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = () => {
+            menu.classList.add("active");
+            menuBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+            body.classList.add("disabledScroll");
+        }
+        cancelBtn.onclick = () => {
+            menu.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            body.classList.remove("disabledScroll");
+        }
+        window.onscroll = () => {
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+        const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+        accordionItemHeaders.forEach(accordionItemHeader => {
+            accordionItemHeader.addEventListener("click", event => {
+                accordionItemHeader.classList.toggle("active");
+                const accordionItemBody = accordionItemHeader.nextElementSibling;
+                if (accordionItemHeader.classList.contains("active")) {
+                    accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+                }
+                else {
+                    accordionItemBody.style.maxHeight = 0;
+                }
+            });
+        });
+    </script>
+    <script src="./JsFile/memberData.js"></script>
+    <script src="./JsFile/member.js"></script>
+</body>
+
+</html>
