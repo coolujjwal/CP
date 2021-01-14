@@ -60,10 +60,28 @@
 }
 .banner{
     height: 75vh;
-    background: url("banner2.jpg") no-repeat;
+    background: url("./images/banner2.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+.logo-content img{
+  display: block;
+  margin-left: auto;margin-top: 1rem;
+  margin-right: auto;
+  height: 20vh;
+  width: 10vw;
+}
+.logo-content h2{
+  justify-content: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+@media screen and (max-width: 868px) {
+  .logo-content img{
+    width: 35vw;
+    height: 20vh;
+  }
 }
 /*new*/
 h1 {
