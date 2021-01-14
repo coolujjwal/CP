@@ -37,7 +37,7 @@
         <img src="./images/yash_ranka.jpeg" alt="">
       </div>
       <div class="top-text">
-        <div class="name">Anshuman-mentor</div>
+        <div class="name">Anshuman Choudhary</div>
         <p>Machine Learning</p>
       </div>
       <div class="bottom-text">
@@ -52,7 +52,7 @@
         <img src="./images/yash_ranka.jpeg" alt="">
       </div>
       <div class="top-text">
-        <div class="name">Yash-mentor</div>
+        <div class="name">Yash Ranka</div>
         <p>Website Developer</p>
       </div>
       <div class="bottom-text">
@@ -67,7 +67,7 @@
         <img src="./images/yash_ranka.jpeg" alt="">
       </div>
       <div class="top-text">
-        <div class="name">Ankur-mentor</div>
+        <div class="name">Ankur Chourasia</div>
         <p>Graphic Developer</p>
       </div>
       <div class="bottom-text">
@@ -88,7 +88,6 @@
 
   <div class="about">
     <div class="content">
-      <!-- <div class="title">Content will be added</div> -->
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo nobis aliquam voluptatibus consequatur quaerat
         recusandae alias, explicabo beatae sint magnam modi accusantium consequuntur magni itaque ab est totam quos
         eaque. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, incidunt eaque numquam perspiciatis
@@ -169,21 +168,33 @@
     const menuBtn = document.querySelector(".menu-btn");
     const cancelBtn = document.querySelector(".cancel-btn");
     menuBtn.onclick = () => {
-      menu.classList.add("active");
-      menuBtn.classList.add("hide");
-      cancelBtn.classList.add("show");
-      body.classList.add("disabledScroll");
+        menu.classList.add("active");
+        menuBtn.classList.add("hide");
+        cancelBtn.classList.add("show");
+        body.classList.add("disabledScroll");
     }
     cancelBtn.onclick = () => {
-      menu.classList.remove("active");
-      menuBtn.classList.remove("hide");
-      cancelBtn.classList.remove("show");
-      body.classList.remove("disabledScroll");
+        menu.classList.remove("active");
+        menuBtn.classList.remove("hide");
+        cancelBtn.classList.remove("show");
+        body.classList.remove("disabledScroll");
     }
-
     window.onscroll = () => {
-      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
     }
+    const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+    accordionItemHeaders.forEach(accordionItemHeader => {
+        accordionItemHeader.addEventListener("click", event => {
+            accordionItemHeader.classList.toggle("active");
+            const accordionItemBody = accordionItemHeader.nextElementSibling;
+            if (accordionItemHeader.classList.contains("active")) {
+                accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+            }
+            else {
+                accordionItemBody.style.maxHeight = 0;
+            }
+        });
+    });
   </script>
 
 </body>
