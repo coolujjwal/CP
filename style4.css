@@ -182,7 +182,7 @@
       width: 80%;
   }
   .member-wrapper{
-    grid-template-columns: repeat(auto-fit, 200px);
+    grid-template-columns: repeat(auto-fit, 250px);
   }
 }
 
