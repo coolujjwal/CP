@@ -3,7 +3,7 @@ class List {
     itemText1,
     itemText2,
     link1,
-    link2
+    linkText
   }) {
     this.leftOne = this.createDiv({
       className: "item1",
@@ -20,24 +20,15 @@ class List {
     this.l3 = this.createAttributeTag({
       href: link1,
       className: "btn0",
-      text: "Link1"
-    });
-    this.l4 = this.createAttributeTag({
-      href: link2,
-      className: "btn0",
-      text: "Link2"
+      text: linkText
     });
     this.rightThree = this.createDiv({
       className: "item3",
       childElements: [this.l3]
     });
-    this.rightFour = this.createDiv({
-      className: "item4",
-      childElements: [this.l4]
-    });
     this.rightItemSource = this.createDiv({
       className: "right-item",
-      childElements: [this.rightThree,this.rightFour]
+      childElements: [this.rightThree]
     });
     this.rowItemSource = this.createDiv({
       className: "row-item",
@@ -74,7 +65,7 @@ const rowItem1 = () => {
         itemText1: list.itemText1,
         itemText2: list.itemText2,
         link1: list.link1,
-        link2: list.link2
+        linkText: list.linkText
       }).createRowCard();
       document.getElementById("post-wrapper-id1").appendChild(projectCard);
     }
@@ -86,7 +77,7 @@ const rowItem2 = () => {
         itemText1: list.itemText1,
         itemText2: list.itemText2,
         link1: list.link1,
-        link2: list.link2
+        linkText: list.linkText
       }).createRowCard();
       document.getElementById("post-wrapper-id2").appendChild(projectCard);
     }
@@ -98,7 +89,7 @@ const rowItem3 = () => {
         itemText1: list.itemText1,
         itemText2: list.itemText2,
         link1: list.link1,
-        link2: list.link2
+        linkText: list.linkText
       }).createRowCard();
       document.getElementById("post-wrapper-id3").appendChild(projectCard);
     }
@@ -110,7 +101,7 @@ const rowItem4 = () => {
         itemText1: list.itemText1,
         itemText2: list.itemText2,
         link1: list.link1,
-        link2: list.link2
+        linkText: list.linkText
       }).createRowCard();
       document.getElementById("post-wrapper-id4").appendChild(projectCard);
     }
@@ -122,7 +113,7 @@ const rowItem5 = () => {
         itemText1: list.itemText1,
         itemText2: list.itemText2,
         link1: list.link1,
-        link2: list.link2
+        linkText: list.linkText
       }).createRowCard();
       document.getElementById("post-wrapper-id5").appendChild(projectCard);
     }
@@ -134,7 +125,7 @@ const rowItem6 = () => {
         itemText1: list.itemText1,
         itemText2: list.itemText2,
         link1: list.link1,
-        link2: list.link2
+        linkText: list.linkText
       }).createRowCard();
       document.getElementById("post-wrapper-id6").appendChild(projectCard);
     }
@@ -146,7 +137,7 @@ const rowItem7 = () => {
         itemText1: list.itemText1,
         itemText2: list.itemText2,
         link1: list.link1,
-        link2: list.link2
+        linkText: list.linkText
       }).createRowCard();
       document.getElementById("post-wrapper-id7").appendChild(projectCard);
     }
@@ -158,7 +149,7 @@ const rowItem8 = () => {
         itemText1: list.itemText1,
         itemText2: list.itemText2,
         link1: list.link1,
-        link2: list.link2
+        linkText: list.linkText
       }).createRowCard();
       document.getElementById("post-wrapper-id8").appendChild(projectCard);
     }
@@ -170,7 +161,7 @@ const rowItem9 = () => {
         itemText1: list.itemText1,
         itemText2: list.itemText2,
         link1: list.link1,
-        link2: list.link2
+        linkText: list.linkText
       }).createRowCard();
       document.getElementById("post-wrapper-id9").appendChild(projectCard);
     }
@@ -182,69 +173,9 @@ const rowItem10 = () => {
         itemText1: list.itemText1,
         itemText2: list.itemText2,
         link1: list.link1,
-        link2: list.link2
+        linkText: list.linkText
       }).createRowCard();
       document.getElementById("post-wrapper-id10").appendChild(projectCard);
-    }
-  );
-};
-const rowItem11 = () => {
-  topic11.map(list => {
-      const projectCard = new List({
-        itemText1: list.itemText1,
-        itemText2: list.itemText2,
-        link1: list.link1,
-        link2: list.link2
-      }).createRowCard();
-      document.getElementById("post-wrapper-id11").appendChild(projectCard);
-    }
-  );
-};
-const rowItem12 = () => {
-  topic12.map(list => {
-      const projectCard = new List({
-        itemText1: list.itemText1,
-        itemText2: list.itemText2,
-        link1: list.link1,
-        link2: list.link2
-      }).createRowCard();
-      document.getElementById("post-wrapper-id12").appendChild(projectCard);
-    }
-  );
-};
-const rowItem13 = () => {
-  topic13.map(list => {
-      const projectCard = new List({
-        itemText1: list.itemText1,
-        itemText2: list.itemText2,
-        link1: list.link1,
-        link2: list.link2
-      }).createRowCard();
-      document.getElementById("post-wrapper-id13").appendChild(projectCard);
-    }
-  );
-};
-const rowItem14 = () => {
-  topic14.map(list => {
-      const projectCard = new List({
-        itemText1: list.itemText1,
-        itemText2: list.itemText2,
-        link1: list.link1,
-        link2: list.link2
-      }).createRowCard();
-      document.getElementById("post-wrapper-id14").appendChild(projectCard);
-    }
-  );
-};
-const rowItem15 = () => {
-  topic15.map(list => {
-      const projectCard = new List({
-        itemText1: list.itemText1,
-        itemText2: list.itemText2,
-        link1: list.link1,
-        link2: list.link2
-      }).createRowCard();
-      document.getElementById("post-wrapper-id15").appendChild(projectCard);
     }
   );
 };
@@ -259,8 +190,3 @@ rowItem7();
 rowItem8();
 rowItem9();
 rowItem10();
-rowItem11();
-rowItem12();
-rowItem13();
-rowItem14();
-rowItem15();
