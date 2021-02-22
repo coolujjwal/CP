@@ -69,8 +69,8 @@
   display: block;
   margin-left: auto;margin-top: 1rem;
   margin-right: auto;
-  height: 20vh;
-  width: 10vw;
+  height: 90px;
+  width: 110px;
 }
 .logo-content h2{
   justify-content: center;
@@ -79,8 +79,8 @@
 }
 @media screen and (max-width: 868px) {
   .logo-content img{
-    width: 35vw;
-    height: 20vh;
+    width: 100px;
+    height: 80px;
   }
 }
 /*new*/
@@ -150,7 +150,7 @@ h1 {
   margin-right: 1rem;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: .8rem;
   text-align: center;
   padding: 0rem 0.5rem;
   cursor: text;
@@ -161,8 +161,28 @@ h1 {
   background-image: linear-gradient(to right, #160b03 0%, #ca641c 100%);
   border: double 0.1rem transparent;
   box-shadow: 0 0.5rem 1rem rgba(118,85,225,0.3);
+  min-width: 100px;
+  max-width: 100px;
 }
 .btn0{
+  text-decoration: none;
+  text-transform: uppercase;
+  /* font-weight: 900; */
+  font-size: .8rem;
+  text-align: center;
+  padding: 0rem 0.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  display: inline-block;
+  color: #fff;
+  letter-spacing: 0;
+  background-image: linear-gradient(to right, #160b03 0%, #ca641c 100%);
+  border: double 0.1rem transparent;
+  box-shadow: 0 0.5rem 1rem #160b03;
+  min-width: 110px;
+  max-width: 110px;
+}
+.btn1{
   text-decoration: none;
   text-transform: uppercase;
   /* font-weight: 900; */
@@ -177,6 +197,15 @@ h1 {
   background-image: linear-gradient(to right, #160b03 0%, #ca641c 100%);
   border: double 0.1rem transparent;
   box-shadow: 0 0.5rem 1rem #160b03;
+  min-width: 110px;
+  max-width: 110px;
+}
+.btn1:hover{
+  border: .1rem solid #160b03;
+  color: #222;
+  background-color: #fff;
+  box-shadow: none;
+  background-image: none;
 }
 .btn0:hover{
   border: .1rem solid #160b03;
@@ -188,6 +217,16 @@ h1 {
 .item4{
   margin-left: 1rem;
 }
+@media screen and (max-width: 868px) {
+  .btn0{
+    min-width: 100px;
+    max-width: 100px;
+  }
+  .item1{
+    min-width: 90px;
+    max-width: 90px;
+  }
+}
 
 /*end new*/
 /*footer*/
@@ -198,7 +237,7 @@ h1 {
   display: flex;
   color: #fff;
   background-image: linear-gradient(to left, #160b03 0%, #5a2d0c 100%);
-  height: 35vh;
+  height: auto;
 }
 .end-of-page .foot{
   flex-basis: 50%;
@@ -206,6 +245,19 @@ h1 {
 }
 .end-of-page .foot-part1{
   padding: 1rem 4rem;
+  text-align: center;
+}
+#practicelinks {
+  display: flex;
+  justify-content: space-evenly;
+}
+#practicelinks ul li{
+  padding: 0.2rem 0;
+}
+.end-of-page .foot-part1 a{
+  padding: 0 1rem;
+  text-decoration: underline;
+  color: #fff;
 }
 .end-of-page .foot h2{
   text-align: center;
@@ -214,11 +266,13 @@ h1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 25vh;
-  width: 10vw;
+  height: 120px;
+  width: 120px;
 }
+/**/
 .end-of-page .foot-part1 p{
   padding: 0.8rem 0;
+  text-align: justify;
 }
 .end-of-page .foot-part2 img{
   padding: 0.8rem 0;
@@ -231,15 +285,29 @@ h1 {
   color: #fff;
   text-align: center;
   padding: 1rem;
+  /* border-top: 2px solid #5a2d0c; */
 }
 @media screen and (max-width: 868px) {
   .end-of-page{
     flex-direction: column;
     color: #fff;
-    height: 80vh;
+    height: auto;
+  }
+  #practicelinks{
+    flex-direction: column;
+  }
+  #practicelinks ul{
+    list-style-type: none;
+  }
+  #practicelinks ul li{
+    list-style-type: none;
+    padding: 0.1rem 0;
   }
   .end-of-page .foot-part1{
     padding: 1rem 2rem;
+  }
+  .end-of-page .foot-part1 p{
+    text-align: center;
   }
   .end-of-page .foot-part3{
     text-align: center;
@@ -248,25 +316,25 @@ h1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 19vh;
-    width: 22vw;
+    height: 100px;
+    width: 100px;
   }
 }
 @media screen and (max-width: 500px) {
   .end-of-page{
     flex-direction: column;
+    /* font-size: 12px; */
     color: #fff;
-    height: 100vh;
+    height: auto;
   }
   .end-of-page .foot-part2 .logo-img img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 25vh;
-    width: 50vw;
+    height: 100px;
+    width: 100px;
   }
 }
-
 /*end footer*/
 
 .about{
@@ -373,16 +441,15 @@ h1 {
       font-size: 23px;
     }
     .item1{
-      font-size: .8rem;
+      font-size: .7rem;
     }
     .item2{
-      font-size: .8rem;
+      font-size: .7rem;
     }
     .item3 a{
-      font-size: .8rem;
+      font-size: .7rem;
     }
     .item4 a{
-      font-size: .8rem;
+      font-size: .7rem;
     }
   }
-  
